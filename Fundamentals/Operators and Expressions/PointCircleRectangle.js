@@ -11,17 +11,25 @@ function coordinates(params) {
   let yMin = -1;
   let isInsideRectangle = x <= xMin && x >= xMax && y <= yMax && y >= yMin;
 
-  if (isInsideRectangle) {
-    if (isInsideCircle) {
-      console.log(`inside circle & inside rectangle`);
-    } else {
-      console.log(`outside circle & inside rectangle`);
-    }
-  } else if (isInsideCircle) {
-    console.log(`inside circle & outside rectangle`);
-  } else {
-    console.log(`outside circle & outside rectangle`);
-  }
+  let rectLocation = isInsideRectangle ? "inside" : "outside";
+  let circleLocation = isInsideCircle ? "inside" : "outside";
+  let result = `${circleLocation} circle & ${rectLocation} rectangle`;
+    console.log(result);
+
+
+
+
+//   if (isInsideRectangle) {
+//     if (isInsideCircle) {
+//       console.log(`inside circle & inside rectangle`);
+//     } else {
+//       console.log(`outside circle & inside rectangle`);
+//     }
+//   } else if (isInsideCircle) {
+//     console.log(`inside circle & outside rectangle`);
+//   } else {
+//     console.log(`outside circle & outside rectangle`);
+//   }
 }
 //   if (x <= xMin && x >= xMax && y <= yMax && y >= yMin) {
 //     if (pointLocationForCircle <= circleRadius) {
