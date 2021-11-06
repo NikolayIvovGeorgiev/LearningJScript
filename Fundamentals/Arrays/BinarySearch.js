@@ -5,7 +5,7 @@ function BinarySearch(params, wantedNumber) {
   let mid = Math.floor((sortedArray.length - 1) / 2);
   let start = 0;
   let end = sortedArray.length - 1;
-  console.log(params);
+ 
   console.log(sortedArray);
   for (;start <= end;) {
     if (wantedNumber < params[mid]) {
